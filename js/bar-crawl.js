@@ -1,6 +1,7 @@
-function Bar(name, location, hours) {
+function Bar(name, latitude, longitude, hours) {
   this.name = name;
-  this.location = location;
+  this.latitude = latitude;
+  this.longitude = longitude;
   this.hours = hours;
 }
 
