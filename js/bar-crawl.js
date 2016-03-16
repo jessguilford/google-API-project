@@ -3,3 +3,5 @@ function Bar(name, location, hours) {
   this.location = location;
   this.hours = hours;
 }
+
+exports.Bar = Bar;

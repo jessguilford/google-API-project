@@ -1,4 +1,40 @@
+// Wireframing
+*:not(body):not(html) {
+  box-sizing: border-box;
+  //border: 1px solid grey;
+}
+
+// Variables
+$medium-breakpoint: 620px;
+$height: 350px;
+
+// Base
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.bar-list {
+  width: 90%;
+  height: $height;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  @media screen and (min-width: $medium-breakpoint) {
+    width: 50%;
+    float: left;
+  }
+}
+
 #map {
-  height: 500px;
-  width: 500px;
+  height: $height;
+  width: 90%;
+  margin: 0 auto;
+  @media screen and (min-width: $medium-breakpoint) {
+    width: 50%;
+    float: right;
+  }
 }

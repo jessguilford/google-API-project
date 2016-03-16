@@ -1,5 +1,29 @@
+*:not(body):not(html) {
+  box-sizing: border-box; }
+
+ul {
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.bar-list {
+  width: 90%;
+  height: 350px;
+  margin: 0 auto;
+  background-color: whitesmoke; }
+  @media screen and (min-width: 620px) {
+    .bar-list {
+      width: 50%;
+      float: left; } }
+
 #map {
-  height: 500px;
-  width: 500px; }
+  height: 350px;
+  width: 90%;
+  margin: 0 auto; }
+  @media screen and (min-width: 620px) {
+    #map {
+      width: 50%;
+      float: right; } }
 
 /*# sourceMappingURL=styles.css.map */
