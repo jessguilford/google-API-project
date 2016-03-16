@@ -2,6 +2,6 @@
 var addMapMarker = require('./../js/map-interface.js').addMapMarker;
 
 $(document).ready(function() {
-  $("#yamhill-li").click(addMapMarker);
+  $(".submit-bars").click(addMapMarker);
     //yamhillMarker.setMap(map);
 });
