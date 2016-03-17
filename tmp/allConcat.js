@@ -11,14 +11,22 @@ $(document).ready(function() {
   var addMarker = function(bar) {
     markerArray.push(bar);
   };
+  var removeAllMarkers = function() {
+    markerArray.splice(0, markerArray.length);
+  };
   $(".bar-item").click(function(){
     var markerID = eval(this.id);
-    console.log(markerID);
     addMarker(markerID);
+    $(this).addClass("is-selected");
   });
   $(".submit-bars").click(function() {
     addMapMarkers(markerArray);
     console.log(addMapMarkers);
+  });
+  $(".clear-selections").click(function() {
+    removeAllMarkers();
+    addMapMarkers(markerArray);
+    $(".bar-item").removeClass("is-selected");
   });
 });
 
