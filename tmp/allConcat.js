@@ -107,8 +107,14 @@ exports.addMapMarkers = function(markerArray) {
       title: thisName,
       map: map
     });
+    var infowindow = new google.maps.InfoWindow({
+    content: this.title,
+    });
+    // marker.addListener("click", function() {
+    //   alert(this.title);
+    // });
     marker.addListener("click", function() {
-      alert(this.title);
+      infowindow.open(map, marker)
     });
   }
 
