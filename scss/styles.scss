@@ -15,6 +15,7 @@ $background-color: rgba($accent-color, 0.4);
 ul {
   padding: 0;
   text-align: center;
+  position: static;
 }
 
 li {
@@ -43,8 +44,24 @@ h1 {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding: 20px 10%;
+    padding: 30px 10%;
     background-color: $background-color;
+  }
+}
+
+.main {
+  position: relative;
+}
+
+.selections {
+  height: 100px;
+  .selected {
+    padding: 10px;
+    margin: 10px;
+    background-color: $accent-color;
+    color: #fff;
+    border-radius: 5px;
+    float: left;
   }
 }
 

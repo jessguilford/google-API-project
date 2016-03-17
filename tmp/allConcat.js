@@ -14,6 +14,7 @@ var belmontInn = new Bar("The Belmont Inn", 45.5164566, -122.6271368, "3-2:30am"
 
 
 $(document).ready(function() {
+  $(".selections").hide();
   var markerArray = [];
   var addMarker = function(bar) {
     markerArray.push(bar);
@@ -25,6 +26,9 @@ $(document).ready(function() {
     var markerID = eval(this.id);
     addMarker(markerID);
     $(this).addClass("is-selected");
+    $(".selections").slideDown();
+    $(".selections").append('<li class="selected">' + markerID.name + '</li>');
+    $(this).hide();
   });
   $(".submit-bars").click(function() {
     addMapMarkers(markerArray);
@@ -34,6 +38,9 @@ $(document).ready(function() {
     removeAllMarkers();
     addMapMarkers(markerArray);
     $(".bar-item").removeClass("is-selected");
+    $(".bar-item").show();
+    $(".selected").hide();
+    $(".selections").slideUp();
   });
 });
 
