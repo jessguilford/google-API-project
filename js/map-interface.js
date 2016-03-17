@@ -24,11 +24,15 @@ exports.addMapMarkers = function(markerArray) {
     console.log("getting markerArray");
     var thisLat = markerArray[i].latitude;
     var thisLong = markerArray[i].longitude;
+    var thisName = markerArray[i].name;
     console.log(thisLat);
     var marker = new google.maps.Marker({
       position: {lat: thisLat, lng: thisLong},
-      title: "Bar",
+      title: thisName,
       map: map
+    });
+    marker.addListener("click", function() {
+      alert(this.title);
     });
   }
 
