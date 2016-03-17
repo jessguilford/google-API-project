@@ -1,21 +1,66 @@
-// var yamhillMarker = require('./../js/map-interface.js').yamhillMarker;
-var addMapMarker = require('./../js/map-interface.js').addMapMarker;
+var addMapMarkers = require('./../js/map-interface.js').addMapMarkers;
+var Bar = require('./../js/bar-crawl.js').Bar;
+var yamhill = new Bar("Yamhill", 45.5175688, -122.6775161, "5-2:30am");
+var triple = new Bar("Triple Nickel", 45.5175688, -122.6261492, "5-2:30am");
 
 $(document).ready(function() {
-  $(".submit-bars").click(addMapMarker);
-    //yamhillMarker.setMap(map);
+  var markerArray = [];
+  $("#yamhill").click(function() {
+    markerArray.push(yamhill);
+    // return markerArray;
+  });
+
+  $(".submit-bars").click(function() {
+    addMapMarkers(markerArray);
+    console.log(addMapMarkers);
+  });
 });
 
-var Bar = require('./../js/bar-crawl.js').Bar;
+// exports.markerArray = markerArray;
 
-function addMapMarker(markerArray) {
-  var yamhill = new Bar("Yamhill", 45.5175688, -122.6775161, "5-2:30am");
-  var triple = new Bar("Triple Nickel", 45.5175688, -122.6261492, "5-2:30am");
-  var markerArray = [yamhill, triple];
-  console.log(markerArray);
+
+
+// $(document).ready(function() {
+//   markerArray = [];
+//   $("#yamhill").click(addToArray("hi there"));
+//
+//   $(".submit-bars").click(addMapMarkers);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+var rubeGoldberg = function(someKindOfInput){
+  //do stuff with your input, and then return some kind of output.
+  someKindOfInput = 4;
+  return someKindOfInput;
+}
+
+var bucket = rubeGoldberg("thing");
+*/
+
+var Bar = require('./../js/bar-crawl.js').Bar;
+// var markerArray = require('./../js/browser-interface.js').markerArray;
+
+// function addToArray(bar) {
+//   markerArray.push(bar);
+//   return markerArray;
+// }
+
+exports.addMapMarkers = function(markerArray) {
+  // var markerArray = [yamhill, triple];
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 45.516326, lng: -122.655503},
-    zoom: 13,
+    zoom: 12,
     styles: [{
       featureType: 'poi',
       stylers: [{ visibility: 'off' }]  // Turn off points of interest.
@@ -38,9 +83,9 @@ function addMapMarker(markerArray) {
     });
   }
 
-  console.log("what's good?");
-}
+  console.log("rendered map markers");
+};
 
-exports.addMapMarker = addMapMarker;
+// exports.addMapMarkers = addMapMarkers;
 
 // exports.yamhillMarker = yamhillMarker;

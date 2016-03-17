@@ -1,15 +1,31 @@
 {
   "name": "barcrawl",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
-    "jshint": "^2.9.1"
+    "bower-files": "^3.11.3",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.9.1",
+    "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessguilford/google-API-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jessguilford/google-API-project/issues"
+  },
+  "homepage": "https://github.com/jessguilford/google-API-project#readme",
+  "description": ""
 }

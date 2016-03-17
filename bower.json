@@ -4,7 +4,7 @@
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/jessguilford/google-API-project",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,8 +13,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.2.1",
-    "bootstrap": "~3.3.6",
-    "moment": "~2.12.0"
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6",
+    "moment": "^2.12.0"
   }
 }

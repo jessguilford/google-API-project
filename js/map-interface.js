@@ -1,13 +1,16 @@
 var Bar = require('./../js/bar-crawl.js').Bar;
+// var markerArray = require('./../js/browser-interface.js').markerArray;
 
-function addMapMarker(markerArray) {
-  var yamhill = new Bar("Yamhill", 45.5175688, -122.6775161, "5-2:30am");
-  var triple = new Bar("Triple Nickel", 45.5175688, -122.6261492, "5-2:30am");
-  var markerArray = [yamhill, triple];
-  console.log(markerArray);
+// function addToArray(bar) {
+//   markerArray.push(bar);
+//   return markerArray;
+// }
+
+exports.addMapMarkers = function(markerArray) {
+  // var markerArray = [yamhill, triple];
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 45.516326, lng: -122.655503},
-    zoom: 13,
+    zoom: 12,
     styles: [{
       featureType: 'poi',
       stylers: [{ visibility: 'off' }]  // Turn off points of interest.
@@ -30,9 +33,9 @@ function addMapMarker(markerArray) {
     });
   }
 
-  console.log("what's good?");
-}
+  console.log("rendered map markers");
+};
 
-exports.addMapMarker = addMapMarker;
+// exports.addMapMarkers = addMapMarkers;
 
 // exports.yamhillMarker = yamhillMarker;
