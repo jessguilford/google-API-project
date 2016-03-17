@@ -7,7 +7,6 @@ var Bar = require('./../js/bar-crawl.js').Bar;
 // }
 
 exports.addMapMarkers = function(markerArray) {
-  // var markerArray = [yamhill, triple];
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 45.516326, lng: -122.655503},
     zoom: 12,
