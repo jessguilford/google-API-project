@@ -2,7 +2,9 @@
   "name": "barcrawl",
   "version": "1.0.0",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-uglify": "^1.5.3"
+  },
   "devDependencies": {
     "bower-files": "^3.11.3",
     "browser-sync": "^2.11.1",
@@ -11,6 +13,7 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^2.0.0",
+    "gulp-util": "^3.0.7",
     "jshint": "^2.9.1",
     "vinyl-source-stream": "^1.1.0"
   },
